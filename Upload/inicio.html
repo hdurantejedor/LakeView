@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script  src="script.js"></script>
+</head>
+
+<body>
+    
+    <nav>
+        <ul>
+            
+            <li><a href="#"  onclick="alternarFormulario() ">Agregar nuevo sujeto de investigación</a></li>
+        </ul>
+ 
+    </nav>
+
+    <button onclick="alternarDesaparicion()">Me Desaparezco</button>
+
+    <div id="contenido">
+      
+          <ul id="listado"></ul>
+
+        <div id="formulario" style="display: none;">
+            <form>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+
+                <label for="tipo">Tipo:</label>
+                <select id="tipo" required>
+                    <option value="cargado">Cargado</option>
+                    <option value="vivo">Vivo</option>
+                </select>
+
+                <label for="dondeVive">Donde vive:</label>
+                <input type="text" id="domicilio" required>
+
+                <label for="desdeCuando">Desde cuando fue descargado:</label>
+                <input type="date" id="tiempo">
+
+                <label for="culpabilidad">Culpabilidad:</label>
+                <select id="culpabilidad" required>
+                    <option value="candidato">Posible candidato</option>
+                    <option value="colaborador">Sabe que ha colaborado en el delito</option>
+                    <option value="delincuente">Ha sido uno de los perpetradores</option>
+                </select>
+
+                <label for="urlImagen">URL de la imagen:</label>
+                <input type="text" id="urlImagen">
+
+                <label for="comentarios">Comentarios:</label>
+                <textarea id="comentarios"></textarea>
+
+
+                <input type="text" id="id" >
+
+                <button id ="guardar" type="button" onclick="guardarDatos()">Guardar</button>
+                <button id ="modificar" type="button" onclick="modificarDatos()">Modificar</button>
+            </form>
+        </div>
+        <img id="miImagen" src="img/lake.jpg" style="width: 100%; height: 100vh; display: none;">
+    </div>
+</body>
+
+</html>
